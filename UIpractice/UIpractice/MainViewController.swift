@@ -32,6 +32,9 @@ class MainViewController: UIViewController, UITextFieldDelegate{
         red_textfield.delegate = self
         green_textfield.delegate = self
         blue_textfield.delegate = self
+        red_textfield.text = "0"
+        green_textfield.text = "0"
+        blue_textfield.text = "0"
     }
     func textField(_ textField:UITextField, shouldChangeCharactersIn range:NSRange,replacementString string: String) -> Bool{
         let length = string.lengthOfBytes(using: String.Encoding.utf8)
@@ -56,6 +59,7 @@ class MainViewController: UIViewController, UITextFieldDelegate{
             alpha: 1
         )
     }
+    
     @IBAction func Changeview_text(_ render: UITextField){
         if let redValue = Float(red_textfield.text ?? ""),
            let greenValue = Float(green_textfield.text ?? ""),
@@ -68,6 +72,7 @@ class MainViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func ChangeText(_ render: UISlider){
+        
         red_textfield.text = "\(Int(red_slider.value))"
         green_textfield.text = "\(Int(green_slider.value))"
         blue_textfield.text = "\(Int(blue_slider.value))"
