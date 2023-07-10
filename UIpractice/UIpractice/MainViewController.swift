@@ -29,7 +29,6 @@ class MainViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("123")
         red_textfield.delegate = self
         green_textfield.delegate = self
         blue_textfield.delegate = self
