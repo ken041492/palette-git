@@ -36,6 +36,7 @@ class MainViewController: UIViewController, UITextFieldDelegate{
         green_textfield.text = "0"
         blue_textfield.text = "0"
     }
+    
     func textField(_ textField:UITextField, shouldChangeCharactersIn range:NSRange,replacementString string: String) -> Bool{
         let length = string.lengthOfBytes(using: String.Encoding.utf8)
         for loopIndex in 0..<length{
@@ -80,7 +81,6 @@ class MainViewController: UIViewController, UITextFieldDelegate{
     @IBAction func UppdateText(_ render: UITextField){
         let new_redtext: Float, new_greentext: Float, new_bluetext: Float
         if let red_string_text = red_textfield.text{
-                
             if let red_float_text = Float(red_string_text){
                 if red_float_text >= 255.0{
                     new_redtext = 255.0
